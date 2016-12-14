@@ -18,9 +18,9 @@ The web developer tools of VS allow to create a [IIS express server](https://www
   
   2. In  &lt;bindings> for the current solution add a new binding with the public ip and the port
   
-  3. Allow incoming connections to the port. Open cmd as administrator and run: netsh http add urlacl url=http://&lt;ip>:&lt;port>/ user=everyone
+  3. Allow incoming connections to the port. Open cmd as administrator and run: netsh http add urlacl url=http://&lt;ip>:&lt;port>/  user=everyone
   
-  4. Set firewall excpetion to port. Open cmd as administrator and run: netsh advfirewall firewall add rule name="IISExpressWeb" dir=in protocol=tcp localport=&lt;port>;profile=private remoteip=localsubnet action=allow
+  4. Set firewall excpetion to port. Open cmd as administrator and run: netsh advfirewall firewall add rule name="IISExpressWeb" dir=in protocol=tcp localport=&lt;port> profile=private remoteip=localsubnet action=allow
 
 ##.Net Client configuration
 
